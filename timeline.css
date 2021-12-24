@@ -1,0 +1,128 @@
+body{
+    font-size: 10px;
+}
+ul{
+    list-style: none;
+}
+.timeline{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border-top:5px solid darkblue
+}
+.timeline li{
+    display: flex; flex-direction: column; align-items: center;
+    width: 20%;
+}
+.timeline li .rc-estd-year:before {
+    background-color: #66DC71;
+    border: none;
+    transition: all 200ms ease-in;
+}
+.rc-estd-year::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 15px;
+    border: 1px solid #ddd;
+    position: absolute;
+    top: -10px;
+    left: 42%;
+}
+.rc-details{
+    display: flex;
+    align-items: center;
+    color: darkcyan;
+    flex-direction: column;
+    height: auto;
+    margin-bottom: 20px;
+    padding: 22px 7px;
+    margin: 11px; background: lightgrey; color: rebeccapurple; border-radius: 10px;
+}
+  .rc-estd-year h4{
+    margin-top: 11px !important;
+}
+.time-bar{
+    position: absolute;
+    background-color: red;
+    width: 100%;
+    display: flex;
+    left:0;
+    animation: timebar 14s     infinite  ;
+     display: none;
+}
+
+.rc-estd-year{
+    border-top: 2px solid darksalmon;
+     position: relative;
+    color:blueviolet;
+    display: flex;
+    align-items: center;
+     width: 100%; 
+     justify-content: center;
+}
+.main-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  
+  
+   border-top: 11px solid blue;
+   
+}
+.grid-inner{
+    
+    padding: 15px;
+}
+.grid-inner-2{
+    text-align: center;
+    height:100px;
+    background-color: blue;
+    border-radius: 5px;
+    padding: 15px;
+    color: whitesmoke;
+}
+.p-bar-inner{
+    margin-top: 10px;
+    background-color: palevioletred;
+    width: 100%;
+    height:5px;
+    position: absolute;
+    animation: pbar1 10s   infinite  ;
+}
+.displayblock{
+    display: block;
+    height:200px;
+    transition: 2s all;
+}
+.p-bar-inner::after{
+    content: "";
+    width:15px;
+    height: 15px;
+    border-radius: 15px;
+    background-color: black;
+    position: absolute;
+    animation: pbar 21s   infinite  ;
+    animation-fill-mode: forwards;
+}
+@keyframes timebar {
+    0%   {width:0%;}
+    15%   {width:15%;}
+    30%   {width:30%;}
+    45%   {width:45%;}
+    60%  {width:60%;}
+    75%  {width:75%;}
+    90%  {width:90%;}
+    100%  {width:100%;}
+}
+@keyframes pbar {
+    0%   {left:0%;}
+    14.28%   {left:7.14%;}
+    28.56%   {left:21.42%;}
+    42.84%   {left:35.7%;}
+    57.12%  {left:49.98%;}
+    71.40%  {left:64.2%;}
+    85.68%  {left:78.54%;}
+    100%  {left:92.82%;}
+     
+}
